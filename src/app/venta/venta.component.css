@@ -1,0 +1,43 @@
+.mat-form-field {
+    width: 400px;
+    text-align: center;
+    padding: 0px;
+    
+    margin: 5px;
+    background: #cde4fb86;
+    border-radius: 4px;
+}
+.box{
+    text-emphasis-color: ivory;
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+.example-label{
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 370px;
+    text-align: center;
+    font-family: 'arial';
+    font-size: 18px;
+   text-emphasis-color: ivory;
+    background-color: rgba(107, 113, 139, 0.87);
+}
+.boton{
+    width: 600px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000; 
+}

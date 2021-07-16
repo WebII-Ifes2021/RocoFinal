@@ -1,0 +1,22 @@
+<div class='example-button-row'>
+    <!--muestro valores ingresados en venta-->
+<h2>Datos del Pasaje:</h2>
+
+    Nombre: {{datosPasaje.nombre}}
+    <br>
+    Fecha venta: {{datosPasaje.fechaViaje| date}}
+    <br>
+    Distino: {{datosPasaje.destino}}
+    <br>
+    Precio: {{datosPasaje.precio}}
+    <br>
+<!--aca se ingresa el porcentaje  -->
+    <mat-form-field>
+        <mat-label>Ingrese un valor de Porcentaje</mat-label>
+        <input matInput placeholder="Ejemplo: 10" type="text" [(ngModel)]="porcentaje">
+    </mat-form-field>
+    <br>
+ 
+    <button  mat-raised-button (click) = "calcularPrecioFinal()">Calcular Precio Final</button>
+
+</div >

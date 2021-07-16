@@ -1,0 +1,43 @@
+
+    <div>
+    <div class="box">
+    <div class="example-label">Ingrese los datos de la venta</div>
+    
+        <form [formGroup]="ventaPasForm" name="ventaPasForm">
+       
+        <mat-form-field>
+            <mat-label>Ingrese su Nombre</mat-label>
+            <textarea matInput placeholder="Ejemplo: Luciano" type="text" formControlName="nombre"></textarea>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Fecha de Viaje</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="fechaViaje">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      
+        <br>
+        <mat-form-field>
+            <mat-label>Ingrese Destino</mat-label>
+            <textarea matInput placeholder="Ejemplo: Miami" type="text" formControlName="destino"></textarea>
+        </mat-form-field>
+        <br>
+              
+        <mat-form-field>
+            <mat-label>Ingrese el precio del Pasaje</mat-label>
+            <input matInput placeholder="Ejemplo: 2500" type="number" formControlName="precio">
+        </mat-form-field>
+        <br>
+        <button mat-raised-button (click) = "guardarDatos()" [disabled]="ventaPasForm.invalid">Guardar</button>
+    </form>
+    </div>
+</div>
+
+<br>
+<div *ngIf="venta"> 
+    <app-pasaje [datosPasaje]="venta" (eventoPrecioFinal)="onRecibe($event)"></app-pasaje>
+    <br>
+</div>
+
+<h2 *ngIf="mostrar">{{ventaPasForm.value.nombre}} Precio final del Pasaje con recargo: ${{precioFinal}}</h2>
